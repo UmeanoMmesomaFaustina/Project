@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="pomodoro.css">
+</head>
+<body>
+    <div class="container">
+        <div class="timer-section" id="timer-section">
+            <div class="timer">
+                <h1>Pomodoro Timer</h1>
+                <div class="pomodoro">
+                    <div id="pomodoro-timer" class="timer-display" data-duration="25.00">
+                        <h1 class="time">25:00</h1>
+                        <div id="mode-text" class="mode-indicator">FOCUS TIME</div>
+                    </div>
+                </div>
+                <div class="time-presets">
+                    <select id="time-preset">
+                        <option value="25-5">25 minutes focus / 5 minutes break</option>
+                        <option value="30-6">30 minutes focus / 6 minutes break</option>
+                        <option value="45-10">45 minutes focus / 10 minutes break</option>
+                        <option value="60-15">60 minutes focus / 15 minutes break</option>
+                    </select>
+                </div>
+
+                <div class="buttons">
+                    <button id="start">START</button>
+                    <button id="stop">STOP</button>
+                    <button id="reset">RESET</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <audio id="focus-end-alert" preload="auto">
+           <source src="./audio files/alarm-2-375697.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="break-end-alert" preload="auto">
+           <source src="./audio files/alarm-327234.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <script src="pomodoro.js"></script>
+</body>
+</html>
